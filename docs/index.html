@@ -1,14 +1,106 @@
-<!doctype html>
-<html lang="en">
-  <head>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>thread-lens</title>
-    <script type="module" crossorigin src="/sylvia-he-portfolio/assets/index-Cyy8ameO.js"></script>
-    <link rel="stylesheet" crossorigin href="/sylvia-he-portfolio/assets/index-b8WApEs2.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+    <title>Sylvia's Portfolio</title>
+    <style>
+        /* 全局重置与背景 */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f7f8fa;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* 标题样式 */
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 0;
+            letter-spacing: 0.5px;
+        }
+
+        /* 卡片容器 */
+        .card-container {
+            width: 100%;
+            max-width: 360px;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        /* 单个卡片样式 */
+        .project-card {
+            display: block;
+            background-color: #ffffff;
+            text-decoration: none;
+            color: #333333;
+            padding: 24px 32px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            font-size: 18px;
+            font-weight: 500;
+            border: 1px solid transparent;
+        }
+
+        .project-card:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 悬停效果 */
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+            color: #000000;
+            border-color: #eef0f2;
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 480px) {
+            .card-container {
+                max-width: 100%;
+            }
+            .project-card {
+                padding: 20px 24px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="#8CB9E6"/>
+            <path d="M19 4L20 7L23 8L20 9L19 12L18 9L15 8L18 7L19 4Z" fill="#8CB9E6" transform="scale(0.6) translate(10, -5)"/>
+        </svg>
+        <h1>Sylvia's Portfolio</h1>
+    </div>
+
+    <div class="card-container">
+        <a href="./v1/" class="project-card">
+            V1
+        </a>
+
+        <a href="./v2/" class="project-card">
+            V2
+        </a>
+    </div>
+
+</body>
 </html>
